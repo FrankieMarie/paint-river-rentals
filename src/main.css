@@ -3,6 +3,7 @@
 @tailwind utilities;
 
 html {
+  font-family: "Raleway", sans-serif;
   height: 100vh;
   overflow: auto;
 }
@@ -36,6 +37,15 @@ button,
 textarea,
 select {
   font: inherit;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "PT Serif", serif;
 }
 
 p,
