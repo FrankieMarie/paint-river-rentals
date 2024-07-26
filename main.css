@@ -2,10 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
-html {
-  font-family: "Raleway", sans-serif;
-  height: 100vh;
-  overflow: auto;
+html,
+body {
+  font-family: 'Raleway', sans-serif;
+  min-height: 100vh;
+  overflow: scroll;
 }
 
 *,
@@ -19,7 +20,6 @@ html {
 }
 
 body {
-  height: 100%;
   -webkit-font-smoothing: antialiased;
 }
 
@@ -45,7 +45,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "PT Serif", serif;
+  font-family: 'PT Serif', serif;
 }
 
 p,
