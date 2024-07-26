@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -11,14 +11,59 @@
       href="https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet"
     />
+    <link href="/main.css" rel="stylesheet" />
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/house.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="color-scheme" content="dark" />
     <title>Paint River Rentals</title>
   </head>
-  <body>
-    <div id="app"></div>
-    <script type="module" src="/src/main.ts"></script>
+  <body class="flex flex-col justify-between">
+    <!-- Header -->
+    <header class="p-4 text-center">
+      <nav class="relative z-50">
+        <a href="/">
+          <h1 class="text-28 font-semibold tracking-wide">
+            Paint River Rentals
+          </h1>
+        </a>
+      </nav>
+    </header>
+    <!-- Content -->
+    <main
+      id="main-content"
+      class="mx-auto flex w-full max-w-7xl flex-grow flex-col"
+    >
+      <img
+        id="hero"
+        src="/images/river.jpg"
+        alt="Image of the Paint River in Crystal Falls, Michigan"
+        class="lazyload absolute left-0 top-0 h-screen w-screen object-cover opacity-60"
+      />
+      <!-- Landing -->
+      <p
+        class="z-10 flex h-[calc(100vh-4.625rem)] flex-grow flex-col items-center justify-center text-center text-7xl font-bold uppercase leading-none sm:text-8xl md:text-9xl lg:text-[10rem]"
+      >
+        <span>Coming</span>
+        <span>Soon</span>
+      </p>
+      <!-- Properties -->
+      <div id="properties" class="my-20 grid grid-cols-2">
+        <!-- North -->
+        <section id="north">
+          <h1 class="text-32 text-center">North Property</h1>
+        </section>
+        <!-- South -->
+        <section id="south" class="text-32 text-center">
+          <h1>South Property</h1>
+        </section>
+      </div>
+    </main>
+    <!-- Footer -->
+    <footer class="z-10 p-4 text-center">
+      &copy; 2024 paintriverrentals.com
+    </footer>
+    <!-- Scripts -->
+    <script src="lazysizes.min.js" async></script>
   </body>
 </html>
