@@ -51,3 +51,7 @@ h6 {
 #app {
   height: 100%;
 }
+
+.blur-background {
+  backdrop-filter: blur(8px);
+}

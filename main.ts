@@ -1,10 +1,13 @@
-const header = document.querySelector('#header');
-const threshold = 450;
+const header = document.getElementById('header');
 
-console.log('header', header);
+window.addEventListener('scroll', () => {
+  const scrollPosition = window.scrollY;
 
-// window.addEventListener('scroll', () => {
-//   const scrollPosition = window.scrollY;
-//   const blurValue = Math.min(scrollPosition / threshold, 10); // map scroll position to blur value
-//   header?.className.filter = `blur(${blurValue}px)`;
-// });
+  if (header != null && scrollPosition >= 100) {
+    header.classList.add('blur-background');
+  }
+
+  if (header != null && scrollPosition === 0) {
+    header?.classList.remove('blur-background');
+  }
+});
