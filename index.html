@@ -29,22 +29,22 @@
           <li
             class="relative block w-fit after:absolute after:-mt-1 after:block after:h-[3px] after:w-full after:origin-left after:scale-x-0 after:bg-emerald-300 after:transition after:duration-300 after:content-[''] after:hover:scale-x-100"
           >
-            <a href="/">About</a>
+            <a href="#about">About</a>
           </li>
           <li
             class="relative block w-fit after:absolute after:-mt-1 after:block after:h-[3px] after:w-full after:origin-left after:scale-x-0 after:bg-emerald-300 after:transition after:duration-300 after:content-[''] after:hover:scale-x-100"
           >
-            <a href="/">North</a>
+            <a href="#north">North</a>
           </li>
           <li
             class="relative block w-fit after:absolute after:-mt-1 after:block after:h-[3px] after:w-full after:origin-left after:scale-x-0 after:bg-emerald-300 after:transition after:duration-300 after:content-[''] after:hover:scale-x-100"
           >
-            <a href="/">South</a>
+            <a href="#south">South</a>
           </li>
         </ul>
         <div class="flex items-center gap-6">
           <a class="cursor-pointer">
-            <img class="w-5" src="/images/airbnb.svg" />
+            <img class="w-5" src="/images/facebook.svg" />
           </a>
           <a class="cursor-pointer">
             <img class="w-5" src="/images/email.svg" />
@@ -77,11 +77,21 @@
           With easy access to a nine hole golf course, bar and restaurant, and
           close to recreational trails.
         </p>
+        <button
+          class="mt-6 max-w-max rounded-3xl bg-emerald-300 px-6 py-4 font-semibold text-black transition-colors hover:bg-emerald-500"
+        >
+          View our properties
+        </button>
       </div>
       <!-- Aboput -->
-      <section id="about" class="relative mx-auto my-20 w-full max-w-7xl">
-        <h1 class="mb-6 text-32 font-semibold tracking-wider">
+      <section id="about" class="mx-auto my-20 w-full max-w-7xl">
+        <h1 class="relative mb-6 text-32 font-semibold tracking-widest">
           About the Properties
+          <img
+            alt="Anchor About Section"
+            class="absolute -left-10 top-4 w-4 opacity-50"
+            src="/images/anchor.svg"
+          />
         </h1>
         <p class="mb-4 text-18 opacity-90">
           Available to reserve year round, our 3-bedroom, 2 bath cabin and
@@ -96,7 +106,7 @@
           provide plenty of room for fun with family and friends.
         </p>
         <h2 class="mb-4 mt-10 text-24 font-semibold tracking-wider">
-          Cabin Amenities for Stay
+          Cabin Amenities for Stay:
         </h2>
         <ul>
           <li class="flex items-center gap-4 text-18">
@@ -119,17 +129,9 @@
           </li>
           <li class="flex items-center gap-4 text-18">
             <img class="w-4" src="/images/circle_check.svg" />
-            <span class="opacity-90"> Free Wi-Fi </span>
-          </li>
-          <li class="flex items-center gap-4 text-18">
-            <img class="w-4" src="/images/circle_check.svg" />
             <span class="opacity-90">
               Patio with seating overlooking river
             </span>
-          </li>
-          <li class="flex items-center gap-4 text-18">
-            <img class="w-4" src="/images/circle_check.svg" />
-            <span class="opacity-90"> BBQ grill </span>
           </li>
           <li class="flex items-center gap-4 text-18">
             <img class="w-4" src="/images/circle_check.svg" />
@@ -139,30 +141,57 @@
             <img class="w-4" src="/images/circle_check.svg" />
             <span class="opacity-90"> Kayaks and snow shoes available </span>
           </li>
+          <li class="flex items-center gap-4 text-18">
+            <img class="w-4" src="/images/circle_check.svg" />
+            <span class="opacity-90"> Free Wi-Fi </span>
+          </li>
+          <li class="flex items-center gap-4 text-18">
+            <img class="w-4" src="/images/circle_check.svg" />
+            <span class="opacity-90"> BBQ grill </span>
+          </li>
         </ul>
       </section>
       <!-- North Property -->
-      <section id="north" class="relative mx-auto w-full max-w-7xl">
-        <h1 class="mb-6 text-32 font-semibold tracking-wider">
+      <section id="north" class="mx-auto w-full max-w-7xl">
+        <h1 class="relative mb-6 text-32 font-semibold tracking-widest">
           North Property
+          <img
+            alt="Anchor North Property"
+            class="absolute -left-10 top-4 w-4 opacity-50"
+            src="/images/anchor.svg"
+          />
         </h1>
       </section>
       <!-- South Property -->
-      <section id="south" class="relative mx-auto my-20 w-full max-w-7xl">
-        <h1 class="mb-6 text-32 font-semibold tracking-wider">
+      <section id="south" class="mx-auto my-20 w-full max-w-7xl">
+        <h1 class="relative mb-6 text-32 font-semibold tracking-widest">
           South Property
+          <img
+            alt="Anchor South Property"
+            class="absolute -left-10 top-4 w-4 opacity-50"
+            src="/images/anchor.svg"
+          />
         </h1>
       </section>
     </main>
     <!-- Footer -->
     <footer class="z-10 p-4 text-center">
-      <p class="mb-4">
+      <p class="mb-4 text-18">
         contact us at
-        <a href="mailto:info@paintriverrentals.com" class="text-emerald-300">
+        <a
+          href="mailto:info@paintriverrentals.com"
+          class="font-semibold text-emerald-300"
+        >
           info@paintriverrentals.com
         </a>
       </p>
-      &copy; 2024 Paint River Rentals
+      <span class="text-14">&copy; 2024 Paint River Rentals | built by</span>
+      <a
+        class="text-14 text-emerald-300"
+        rel="noopener noreferrer"
+        href="https://frankiemarie.me"
+        >FMWebDev</a
+      >
     </footer>
     <!-- Scripts -->
     <script src="lazysizes.min.js" async></script>
