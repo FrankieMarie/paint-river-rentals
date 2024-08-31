@@ -1,5 +1,6 @@
 const header = document.getElementById('header');
 
+// adds background blur to header when scrolled
 window.addEventListener('scroll', () => {
   const scrollPosition = window.scrollY;
 
