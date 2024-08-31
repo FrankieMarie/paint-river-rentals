@@ -7,10 +7,6 @@
       href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet"
     />
-    <link
-      href="https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
-      rel="stylesheet"
-    />
     <link href="/main.css" rel="stylesheet" />
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/house.svg" />
@@ -18,21 +14,48 @@
     <meta name="color-scheme" content="dark" />
     <title>Paint River Rentals</title>
   </head>
-  <body class="flex flex-col justify-between">
+  <body class="relative flex flex-col justify-between bg-neutral-800">
     <!-- Header -->
-    <header class="p-4 text-center">
-      <nav class="relative z-50">
-        <a href="/">
-          <h1 class="text-28 font-semibold tracking-wide">
-            Paint River Rentals
-          </h1>
-        </a>
+    <header id="header" class="sticky left-0 top-0 z-50">
+      <nav
+        class="max-w-screen-max-content relative mx-auto flex w-full items-center justify-between px-6 py-6 font-semibold tracking-widest text-white md:px-12"
+      >
+        <ul class="flex items-center gap-8">
+          <li
+            class="relative block w-fit after:absolute after:-mt-1 after:block after:h-[3px] after:w-full after:origin-left after:scale-x-0 after:bg-emerald-300 after:transition after:duration-300 after:content-[''] after:hover:scale-x-100"
+          >
+            <a href="/">Home</a>
+          </li>
+          <li
+            class="relative block w-fit after:absolute after:-mt-1 after:block after:h-[3px] after:w-full after:origin-left after:scale-x-0 after:bg-emerald-300 after:transition after:duration-300 after:content-[''] after:hover:scale-x-100"
+          >
+            <a href="/">About</a>
+          </li>
+          <li
+            class="relative block w-fit after:absolute after:-mt-1 after:block after:h-[3px] after:w-full after:origin-left after:scale-x-0 after:bg-emerald-300 after:transition after:duration-300 after:content-[''] after:hover:scale-x-100"
+          >
+            <a href="/">North</a>
+          </li>
+          <li
+            class="relative block w-fit after:absolute after:-mt-1 after:block after:h-[3px] after:w-full after:origin-left after:scale-x-0 after:bg-emerald-300 after:transition after:duration-300 after:content-[''] after:hover:scale-x-100"
+          >
+            <a href="/">South</a>
+          </li>
+        </ul>
+        <div class="flex items-center gap-6">
+          <a class="cursor-pointer">
+            <img class="w-5" src="/images/airbnb.svg" />
+          </a>
+          <a class="cursor-pointer">
+            <img class="w-5" src="/images/email.svg" />
+          </a>
+        </div>
       </nav>
     </header>
     <!-- Content -->
     <main
       id="main-content"
-      class="mx-auto flex w-full max-w-7xl flex-grow flex-col"
+      class="max-w-screen-max-content mx-auto flex w-full flex-grow flex-col px-6 md:px-12"
     >
       <img
         id="hero"
@@ -41,27 +64,105 @@
         class="lazyload absolute left-0 top-0 h-screen w-screen object-cover opacity-60"
       />
       <!-- Landing -->
-      <p
-        class="z-10 flex h-[calc(100vh-4.625rem)] flex-grow flex-col items-center justify-center text-center text-7xl font-bold uppercase leading-none opacity-50 sm:text-8xl md:text-9xl lg:text-[10rem]"
+      <div
+        class="z-10 flex h-[calc(100vh-4.625rem)] flex-grow flex-col justify-end pb-60 leading-none"
       >
-        <span>Coming</span>
-        <span>Soon</span>
-      </p>
-      <!-- Properties -->
-      <div id="properties" class="my-20 grid grid-cols-2">
-        <!-- North -->
-        <section id="north">
-          <h1 class="text-center text-32">North Property</h1>
-        </section>
-        <!-- South -->
-        <section id="south" class="text-center text-32">
-          <h1>South Property</h1>
-        </section>
+        <h1 class="mb-6 text-80 font-extrabold tracking-wide opacity-75">
+          Paint River Rentals
+        </h1>
+        <p
+          class="max-w-xl rounded-2xl text-18 font-semibold leading-6 tracking-wider opacity-90"
+        >
+          Stay at one of our beautiful cabins on the Crystal View Golf Course!
+          With easy access to a nine hole golf course, bar and restaurant, and
+          close to recreational trails.
+        </p>
       </div>
+      <!-- Aboput -->
+      <section id="about" class="relative mx-auto my-20 w-full max-w-7xl">
+        <h1 class="mb-6 text-32 font-semibold tracking-wider">
+          About the Properties
+        </h1>
+        <p class="mb-4 text-18 opacity-90">
+          Available to reserve year round, our 3-bedroom, 2 bath cabin and
+          2-bedroom, 2 bath cabin are the perfect places for a family-friendly
+          getaway or golf outing with friends!
+        </p>
+        <p class="text-18 opacity-90">
+          Our comfortable cabins located in Crystal Falls, Michigan, can
+          accommodate up to 8 people in the 3 bedroom property, and 6 people in
+          the 2-bedroom property. The spacious open room concept, electric
+          fireplace, full kitchen, and large patio overlooking Paint River
+          provide plenty of room for fun with family and friends.
+        </p>
+        <h2 class="mb-4 mt-10 text-24 font-semibold tracking-wider">
+          Cabin Amenities for Stay
+        </h2>
+        <ul>
+          <li class="flex items-center gap-4 text-18">
+            <img class="w-4" src="/images/circle_check.svg" />
+            <span class="opacity-90">
+              Discounts on golf packages and dining
+            </span>
+          </li>
+          <li class="flex items-center gap-4 text-18">
+            <img class="w-4" src="/images/circle_check.svg" />
+            <span class="opacity-90">
+              Golf carts on property for easy access to Chung’s Bar & Grill
+            </span>
+          </li>
+          <li class="flex items-center gap-4 text-18">
+            <img class="w-4" src="/images/circle_check.svg" />
+            <span class="opacity-90">
+              Full kitchen with microwave, stove and plenty of storage
+            </span>
+          </li>
+          <li class="flex items-center gap-4 text-18">
+            <img class="w-4" src="/images/circle_check.svg" />
+            <span class="opacity-90"> Free Wi-Fi </span>
+          </li>
+          <li class="flex items-center gap-4 text-18">
+            <img class="w-4" src="/images/circle_check.svg" />
+            <span class="opacity-90">
+              Patio with seating overlooking river
+            </span>
+          </li>
+          <li class="flex items-center gap-4 text-18">
+            <img class="w-4" src="/images/circle_check.svg" />
+            <span class="opacity-90"> BBQ grill </span>
+          </li>
+          <li class="flex items-center gap-4 text-18">
+            <img class="w-4" src="/images/circle_check.svg" />
+            <span class="opacity-90"> Outdoor fire pit (wood provided) </span>
+          </li>
+          <li class="flex items-center gap-4 text-18">
+            <img class="w-4" src="/images/circle_check.svg" />
+            <span class="opacity-90"> Kayaks and snow shoes available </span>
+          </li>
+        </ul>
+      </section>
+      <!-- North Property -->
+      <section id="north" class="relative mx-auto w-full max-w-7xl">
+        <h1 class="mb-6 text-32 font-semibold tracking-wider">
+          North Property
+        </h1>
+      </section>
+      <!-- South Property -->
+      <section id="south" class="relative mx-auto my-20 w-full max-w-7xl">
+        <h1 class="mb-6 text-32 font-semibold tracking-wider">
+          South Property
+        </h1>
+      </section>
     </main>
     <!-- Footer -->
     <footer class="z-10 p-4 text-center">
-      &copy; 2024 paintriverrentals.com
+      <p class="mb-4">
+        contact us at
+        <a href="mailto:info@paintriverrentals.com" class="text-emerald-300">
+          info@paintriverrentals.com
+        </a>
+      </p>
+      &copy; 2024 Paint River Rentals
     </footer>
     <!-- Scripts -->
     <script src="lazysizes.min.js" async></script>

@@ -3,6 +3,9 @@ export default {
   content: ['./src/**/*.ts', 'index.html'],
   theme: {
     extend: {
+      screens: {
+        'max-content': '125rem'
+      },
       fontSize: {
         10: '.625rem',
         12: '.75rem',
@@ -12,7 +15,10 @@ export default {
         22: '1.375rem',
         24: '1.5rem',
         28: '1.75rem',
-        32: '2rem'
+        32: '2rem',
+        64: '4rem',
+        80: '5rem',
+        96: '6rem'
       }
     }
   },
