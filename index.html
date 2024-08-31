@@ -15,10 +15,13 @@
     <title>Paint River Rentals</title>
   </head>
   <body class="relative flex flex-col justify-between bg-neutral-800">
+    <!-- Scripts -->
+    <script src="lazysizes.min.js" async></script>
+    <script src="/main.ts"></script>
     <!-- Header -->
     <header id="header" class="sticky left-0 top-0 z-50">
       <nav
-        class="max-w-screen-max-content relative mx-auto flex w-full items-center justify-between px-6 py-6 font-semibold tracking-widest text-white md:px-12"
+        class="relative mx-auto flex w-full max-w-screen-max-content items-center justify-between px-6 py-6 font-semibold tracking-widest text-white md:px-12"
       >
         <ul class="flex items-center gap-8">
           <li
@@ -55,7 +58,7 @@
     <!-- Content -->
     <main
       id="main-content"
-      class="max-w-screen-max-content mx-auto flex w-full flex-grow flex-col px-6 md:px-12"
+      class="mx-auto flex w-full max-w-screen-max-content flex-grow flex-col px-6 md:px-12"
     >
       <img
         id="hero"
@@ -77,14 +80,15 @@
           With easy access to a nine hole golf course, bar and restaurant, and
           close to recreational trails.
         </p>
-        <button
+        <a
           class="mt-6 max-w-max rounded-3xl bg-emerald-300 px-6 py-4 font-semibold text-black transition-colors hover:bg-emerald-500"
+          href="#north"
         >
           View our properties
-        </button>
+        </a>
       </div>
-      <!-- Aboput -->
-      <section id="about" class="mx-auto my-20 w-full max-w-7xl">
+      <!-- About -->
+      <section id="about" class="mx-auto my-24 w-full max-w-7xl">
         <h1 class="relative mb-6 text-32 font-semibold tracking-widest">
           About the Properties
           <img
@@ -118,7 +122,13 @@
           <li class="flex items-center gap-4 text-18">
             <img class="w-4" src="/images/circle_check.svg" />
             <span class="opacity-90">
-              Golf carts on property for easy access to Chung’s Bar & Grill
+              Golf carts on property for easy access to
+              <a
+                class="text-emerald-300"
+                rel="noopener noreferrer"
+                href="https://crystalviewgolfcourse.com/bar-and-grill.htm"
+                >Chung’s Bar & Grill</a
+              >
             </span>
           </li>
           <li class="flex items-center gap-4 text-18">
@@ -161,9 +171,43 @@
             src="/images/anchor.svg"
           />
         </h1>
+        <div class="grid grid-cols-2 gap-10">
+          <div class="rounded-3xl">
+            <img class="rounded-3xl object-cover" src="/images/river.jpg" />
+          </div>
+          <div>
+            <ul class="flex flex-col gap-4">
+              <li class="flex items-center gap-4 text-18">
+                <img class="w-4" src="/images/arrow_right.svg" />
+                2 bedroom, 2 bathroom
+              </li>
+              <li class="flex items-center gap-4 text-18">
+                <img class="w-4" src="/images/arrow_right.svg" />
+                <span><strong>$350</strong> per night</span>
+              </li>
+              <li class="flex items-center gap-4 text-18">
+                <img class="w-4" src="/images/arrow_right.svg" />
+                <span>
+                  <strong>$325</strong> per night when booked for 7 consecutive
+                  nights or longer
+                </span>
+              </li>
+              <li class="flex items-center gap-4 text-18">
+                <img class="w-4" src="/images/arrow_right.svg" />
+                <em class="block text-12">Booking is done through AirBnB</em>
+              </li>
+            </ul>
+
+            <button
+              class="mt-8 max-w-max rounded-3xl bg-emerald-300 px-6 py-2 font-semibold text-black transition-colors hover:bg-emerald-500"
+            >
+              Book now!
+            </button>
+          </div>
+        </div>
       </section>
       <!-- South Property -->
-      <section id="south" class="mx-auto my-20 w-full max-w-7xl">
+      <section id="south" class="mx-auto my-24 w-full max-w-7xl">
         <h1 class="relative mb-6 text-32 font-semibold tracking-widest">
           South Property
           <img
@@ -172,10 +216,43 @@
             src="/images/anchor.svg"
           />
         </h1>
+        <div class="grid grid-cols-2 gap-10">
+          <div class="rounded-3xl">
+            <img class="rounded-3xl object-cover" src="/images/river.jpg" />
+          </div>
+          <div>
+            <ul class="flex flex-col gap-4">
+              <li class="flex items-center gap-4 text-18">
+                <img class="w-4" src="/images/arrow_right.svg" />
+                3 bedroom, 2 bathroom
+              </li>
+              <li class="flex items-center gap-4 text-18">
+                <img class="w-4" src="/images/arrow_right.svg" />
+                <span><strong>$450</strong> per night</span>
+              </li>
+              <li class="flex items-center gap-4 text-18">
+                <img class="w-4" src="/images/arrow_right.svg" />
+                <span>
+                  <strong>$425</strong> per night when booked for 7 consecutive
+                  nights or longer
+                </span>
+              </li>
+              <li class="flex items-center gap-4 text-18">
+                <img class="w-4" src="/images/arrow_right.svg" />
+                <em class="block text-12">Booking is done through AirBnB</em>
+              </li>
+            </ul>
+            <button
+              class="mt-8 max-w-max rounded-3xl bg-emerald-300 px-6 py-2 font-semibold text-black transition-colors hover:bg-emerald-500"
+            >
+              Book now!
+            </button>
+          </div>
+        </div>
       </section>
     </main>
     <!-- Footer -->
-    <footer class="z-10 p-4 text-center">
+    <footer class="z-10 p-8 text-center">
       <p class="mb-4 text-18">
         contact us at
         <a
@@ -193,7 +270,5 @@
         >FMWebDev</a
       >
     </footer>
-    <!-- Scripts -->
-    <script src="lazysizes.min.js" async></script>
   </body>
 </html>
