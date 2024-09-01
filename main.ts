@@ -90,3 +90,5 @@ anchorIcons.forEach((icon) => {
     });
   });
 });
+
+// image carousel
