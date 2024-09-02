@@ -32,48 +32,67 @@ function hideShowArrows(slides, targetIndex, prevBtn, nextBtn) {
   }
 }
 
+function handleDrag(track, index, dragged, clientX, initialX) {
+  const slides = Array.from(track.children);
+  const currentSlide = track.querySelector('.current-slide');
+  const prevSlide = currentSlide.previousElementSibling;
+  const prevIndex = slides.findIndex((slide) => slide === prevSlide);
+  const nextSlide = currentSlide.nextElementSibling;
+  const nextIndex = slides.findIndex((slide) => slide === nextSlide);
+  const currentDot = dotsNavs[index].querySelector('.current-slide');
+  const nextDot = currentDot.nextElementSibling;
+  const prevDot = currentDot.previousElementSibling;
+  const prevBtn = prevBtns[index];
+  const nextBtn = nextBtns[index];
+
+  if (dragged && clientX < initialX) {
+    // drag left, move next
+    moveToSlide(track, currentSlide, nextSlide);
+    updateDots(currentDot, nextDot);
+    hideShowArrows(slides, nextIndex, prevBtn, nextBtn);
+  } else if (dragged && clientX > initialX) {
+    // drag right, move prev
+    moveToSlide(track, currentSlide, prevSlide);
+    updateDots(currentDot, prevDot);
+    hideShowArrows(slides, prevIndex, prevBtn, nextBtn);
+  }
+}
+
 tracks.forEach((track, i) => {
   // set slide positions
   Array.from(track.children).forEach(setSlidePosition);
 
-  // handle drag events for slides
+  // initial drag variables
   let initialX = 0;
   let dragged = false;
 
+  // mobile drag events
+  track.addEventListener('touchstart', (e) => {
+    initialX = e.changedTouches[0].clientX;
+    dragged = false;
+  });
+
+  track.addEventListener('touchmove', () => {
+    dragged = true;
+  });
+
+  track.addEventListener('touchend', (e) => {
+    handleDrag(track, i, dragged, e.changedTouches[0].clientX, initialX);
+  });
+
+  // destop drag events
   track.addEventListener('mousedown', (e) => {
     e.preventDefault();
     initialX = e.clientX;
     dragged = false;
   });
 
-  track.addEventListener('mousemove', (e) => {
+  track.addEventListener('mousemove', () => {
     dragged = true;
   });
 
   track.addEventListener('mouseup', (e) => {
-    const slides = Array.from(track.children);
-    const currentSlide = track.querySelector('.current-slide');
-    const prevSlide = currentSlide.previousElementSibling;
-    const prevIndex = slides.findIndex((slide) => slide === prevSlide);
-    const nextSlide = currentSlide.nextElementSibling;
-    const nextIndex = slides.findIndex((slide) => slide === nextSlide);
-    const currentDot = dotsNavs[i].querySelector('.current-slide');
-    const nextDot = currentDot.nextElementSibling;
-    const prevDot = currentDot.previousElementSibling;
-    const prevBtn = prevBtns[i];
-    const nextBtn = nextBtns[i];
-
-    if (dragged && e.clientX < initialX) {
-      // drag left, move next
-      moveToSlide(track, currentSlide, nextSlide);
-      updateDots(currentDot, nextDot);
-      hideShowArrows(slides, nextIndex, prevBtn, nextBtn);
-    } else if (dragged && e.clientX > initialX) {
-      // drag right, move prev
-      moveToSlide(track, currentSlide, prevSlide);
-      updateDots(currentDot, prevDot);
-      hideShowArrows(slides, prevIndex, prevBtn, nextBtn);
-    }
+    handleDrag(track, i, dragged, e.clientX, initialX);
   });
 });
 
