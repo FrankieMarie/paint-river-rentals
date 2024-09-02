@@ -1,24 +1,9 @@
-const header = document.getElementById('header');
 const navItems = document.querySelectorAll('nav li');
 const anchorIcons = document.querySelectorAll('.anchor');
-
-// adds background blur to header when scrolled
-window.addEventListener('scroll', () => {
-  const scrollPosition = window.scrollY;
-
-  if (header != null && scrollPosition >= 100) {
-    header.classList.add('blur-background');
-  }
-
-  if (header != null && scrollPosition === 0) {
-    header?.classList.remove('blur-background');
-  }
-});
 
 // add underline to active nav item
 navItems.forEach((item) => {
   item.addEventListener('click', (e) => {
-    // @ts-ignore
     const hash = e?.target?.attributes.href.value;
 
     // reset all other nav items to no underline
@@ -56,7 +41,6 @@ navItems.forEach((item) => {
 // highlight anchor icon that matches current href
 anchorIcons.forEach((icon) => {
   icon.addEventListener('click', (e) => {
-    // @ts-ignore
     const hash = e.target?.offsetParent.firstElementChild.getAttribute('href');
 
     // reset all other anchor icons to opacity-50
@@ -90,5 +74,3 @@ anchorIcons.forEach((icon) => {
     });
   });
 });
-
-// image carousel

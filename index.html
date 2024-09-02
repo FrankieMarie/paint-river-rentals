@@ -7,7 +7,8 @@
       href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet"
     />
-    <link href="/main.css" rel="stylesheet" />
+    <link href="css/main.css" rel="stylesheet" />
+    <link href="css/carousel.css" rel="stylesheet" />
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/house.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -16,7 +17,9 @@
   </head>
   <body id="top" class="relative flex flex-col justify-between bg-neutral-800">
     <!-- Scripts -->
-    <script type="text/javascript" defer src="/main.ts"></script>
+    <script type="text/javascript" defer src="js/main.js"></script>
+    <script type="text/javascript" defer src="js/navigation.js"></script>
+    <script type="text/javascript" defer src="js/carousel.js"></script>
     <!-- Header -->
     <header id="header" class="sticky left-0 top-0 z-50">
       <nav
@@ -88,7 +91,7 @@
       </div>
       <!-- About -->
       <section id="about" class="mx-auto w-full max-w-7xl">
-        <div class="mt-24"></div>
+        <div class="mt-32"></div>
         <h1 class="relative mb-6 text-32 font-semibold tracking-widest">
           About the Properties
           <a class="anchor opacity-50 hover:opacity-100" href="#about">
@@ -112,7 +115,7 @@
           provide plenty of room for fun with family and friends.
         </p>
         <h2 class="mb-4 mt-10 text-24 font-semibold tracking-wider">
-          Cabin Amenities for Stay:
+          Amenities:
         </h2>
         <ul>
           <li class="flex items-center gap-4 text-18">
@@ -124,7 +127,7 @@
           <li class="flex items-center gap-4 text-18">
             <img class="w-4" src="/images/circle_check.svg" alt="" />
             <span class="opacity-90">
-              Golf carts on property for easy access to
+              Easy access to
               <a
                 class="text-emerald-300"
                 rel="noopener noreferrer"
@@ -136,7 +139,7 @@
           <li class="flex items-center gap-4 text-18">
             <img class="w-4" src="/images/circle_check.svg" alt="" />
             <span class="opacity-90">
-              Full kitchen with microwave, stove and plenty of storage
+              Full kitchen with appliances and storage
             </span>
           </li>
           <li class="flex items-center gap-4 text-18">
@@ -151,10 +154,6 @@
           </li>
           <li class="flex items-center gap-4 text-18">
             <img class="w-4" src="/images/circle_check.svg" alt="" />
-            <span class="opacity-90"> Kayaks and snow shoes available </span>
-          </li>
-          <li class="flex items-center gap-4 text-18">
-            <img class="w-4" src="/images/circle_check.svg" alt="" />
             <span class="opacity-90"> Free Wi-Fi </span>
           </li>
           <li class="flex items-center gap-4 text-18">
@@ -165,7 +164,7 @@
       </section>
       <!-- North Property -->
       <section id="north" class="mx-auto w-full max-w-7xl">
-        <div class="mt-24"></div>
+        <div class="mt-32"></div>
         <h1 class="relative mb-6 text-32 font-semibold tracking-widest">
           North Property
           <a class="anchor opacity-50 hover:opacity-100" href="#north">
@@ -176,45 +175,45 @@
             />
           </a>
         </h1>
-        <div class="grid grid-cols-2 gap-20">
+        <div class="flex gap-20">
           <!-- North Property Carousel -->
           <div class="carousel">
-            <button class="carousel_button prev">
+            <button class="carousel_button prev hidden">
               <img src="/images/chevron_left.svg" alt="" />
             </button>
             <div class="carousel_track-container rounded-3xl">
               <ul class="carousel_track">
-                <li class="carousel_slide">
+                <li class="carousel_slide current-slide">
                   <img
-                    class="rounded-3xl object-cover"
+                    class="carousel_image"
                     src="/images/north-1.jpg"
                     alt=""
                   />
                 </li>
                 <li class="carousel_slide">
                   <img
-                    class="rounded-3xl object-cover"
+                    class="carousel_image"
                     src="/images/north-2.jpg"
                     alt=""
                   />
                 </li>
                 <li class="carousel_slide">
                   <img
-                    class="rounded-3xl object-cover"
+                    class="carousel_image"
                     src="/images/north-3.jpg"
                     alt=""
                   />
                 </li>
                 <li class="carousel_slide">
                   <img
-                    class="rounded-3xl object-cover"
+                    class="carousel_image"
                     src="/images/north-4.jpg"
                     alt=""
                   />
                 </li>
                 <li class="carousel_slide">
                   <img
-                    class="rounded-3xl object-cover"
+                    class="carousel_image"
                     src="/images/north-5.jpg"
                     alt=""
                   />
@@ -268,8 +267,8 @@
         </div>
       </section>
       <!-- South Property -->
-      <section id="south" class="mx-auto mb-24 w-full max-w-7xl">
-        <div class="mt-24"></div>
+      <section id="south" class="mx-auto w-full max-w-7xl">
+        <div class="mt-40"></div>
         <h1 class="relative mb-6 text-32 font-semibold tracking-widest">
           South Property
           <a class="anchor opacity-50 hover:opacity-100" href="#south">
@@ -280,31 +279,31 @@
             />
           </a>
         </h1>
-        <div class="grid grid-cols-2 gap-20">
+        <div class="flex gap-20">
           <!-- South Property Carousel -->
           <div class="carousel">
-            <button class="carousel_button prev">
+            <button class="carousel_button prev hidden">
               <img src="/images/chevron_left.svg" alt="" />
             </button>
             <div class="carousel_track-container rounded-3xl">
               <ul class="carousel_track">
-                <li class="carousel_slide">
+                <li class="carousel_slide current-slide">
                   <img
-                    class="rounded-3xl object-cover"
+                    class="carousel_image"
                     src="/images/south-3.jpg"
                     alt=""
                   />
                 </li>
                 <li class="carousel_slide">
                   <img
-                    class="rounded-3xl object-cover"
+                    class="carousel_image"
                     src="/images/south-2.jpg"
                     alt=""
                   />
                 </li>
                 <li class="carousel_slide">
                   <img
-                    class="rounded-3xl object-cover"
+                    class="carousel_image"
                     src="/images/south-1.jpg"
                     alt=""
                   />
@@ -357,7 +356,7 @@
       </section>
     </main>
     <!-- Footer -->
-    <footer class="z-10 p-8 text-center">
+    <footer class="z-10 mt-40 p-8 text-center">
       <p class="mb-4 text-18">
         contact us at
         <a
